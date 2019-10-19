@@ -8,6 +8,10 @@ if [ "${GITHUB_REF}" == "${GITHUB_REF#refs/tags/}" ]; then
 fi
 
 TAG="${GITHUB_REF#refs/tags/}"
+echo "TAG: $TAG"
+echo "PWD: $(pwd)"
+echo "LS : $(ls)"
+echo "LS : $(ls ./target)"
 
 # Prepare the headers
 AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
